@@ -1,4 +1,4 @@
-// main.js
+// main.js 1
 
 window.addEventListener("DOMContentLoaded", () => {
     const btn = document.querySelector(".Btn");
