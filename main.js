@@ -28,25 +28,51 @@ async function getNextPhone() {
 }
 
 // ----------- EJEMPLO DE USO EN BOTÓN WHATSAPP -------------
-const whatsappBtn = document.getElementById("whatsappBtn");
+const whatsappBtn = document.getElementById("whatsappButton");
+const nameInput = document.getElementById("clientName");
 
+// desactivar botón al inicio
+whatsappBtn.disabled = true;
+whatsappBtn.style.opacity = "0.5";
+whatsappBtn.style.cursor = "not-allowed";
+
+// activar botón solo si hay texto
+nameInput.addEventListener("input", () => {
+    const name = nameInput.value.trim();
+
+    if (name.length > 0) {
+        whatsappBtn.disabled = false;
+        whatsappBtn.style.opacity = "1";
+        whatsappBtn.style.cursor = "pointer";
+    } else {
+        whatsappBtn.disabled = true;
+        whatsappBtn.style.opacity = "0.5";
+        whatsappBtn.style.cursor = "not-allowed";
+    }
+});
+
+// click botón
 if (whatsappBtn) {
     whatsappBtn.addEventListener("click", async () => {
+
+        const name = nameInput.value.trim();
+
+        // seguridad extra
+        if (!name) return;
 
         // Pixel Meta
         if (typeof fbq !== "undefined") {
             fbq('trackCustom', 'WhatsappClick', { buttonName: 'WhatsApp' });
-            console.log("WhatsApp button clicked - Pixel event sent!");
         }
 
-        // Obtener el siguiente número
+        // obtener número
         const number = await getNextPhone();
         if (!number) return;
 
-        // Redirigir a WhatsApp
-        // Redirigir a WhatsApp en nueva pestaña
-        const message = encodeURIComponent("Hola, quiero un usuario!");
-        window.location.href = `https://wa.me/${number}?text=${message}`;
+        // mensaje personalizado
+        const message = encodeURIComponent(`Hola, soy ${name}. Quiero un usuario`);
 
+        // redirección
+        window.location.href = `https://wa.me/${number}?text=${message}`;
     });
 }
