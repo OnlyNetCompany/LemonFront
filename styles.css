@@ -12,20 +12,18 @@
 
 body {
   /* background-image: url(./assets/bg/background-3.jpg); */
-
   width: 100%;
   height: 100%;
   background-color: #011d01;
   background-image: url(./assets/bg/bg.png);
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: center;
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  height: 100vh;
-  width: 100%;
+	background-size: cover; 
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh; 
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-direction: column;
 }
 
 .body-container {
@@ -63,10 +61,7 @@ body {
 }
 
 .main-text p {
-  background: #CFB647;
-  background: radial-gradient(circle farthest-side at center center, #edff47 50%, #92d645 76%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
   font-size: 1.7rem;
   text-transform: uppercase;
   text-align: center;
@@ -78,7 +73,8 @@ body {
 }
 
 .main-text span {
-  color: #c6ff5c;
+	color: #11c40e; 
+	text-shadow: 0 0 10px #11c40e; 
   font-family: "Bebas Neue", sans-serif;
   font-size: 2.2rem;
   text-transform: uppercase;
@@ -86,7 +82,6 @@ body {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
-  text-shadow: 1px 1px black;
 }
 
 .text-container {
@@ -112,65 +107,44 @@ body {
 /* button styles */
 
 .btn-container {
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-
 }
 
-.Btn {
-  margin-top: -2rem;
+.button {
+  padding: 0.6em 1.3em;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 45px;
-  /* estado inicial */
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  border: 1px solid rgb(246, 248, 117);
-  /* estado inicial */
+  justify-content: center;
+  gap: 1rem;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+
+  background-color: #000;
+  border-radius: 10px;
+  border: 2px solid rgb(11, 199, 14);
+  color: #fff;
+
+  box-shadow:
+    0 0 30px rgb(6, 194, 6),
+    0 0 15px rgb(20, 175, 6) inset;
+
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 2px 2px 10px rgba(43, 255, 1, 0.199);
-  background-color: #0003019f;
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.4);
+  transition: all 0.2s ease;
 }
 
-.sign {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease-in-out;
+.button img {
+  width: 28px;
+  height: 28px;
 }
 
-.sign svg {
-  width: 25px;
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 40px rgb(57, 184, 10),
+    0 0 20px rgb(35, 173, 7) inset;
 }
-
-.sign svg path {
-  fill: rgb(212, 238, 67);
-}
-
-.text {
-  position: absolute;
-  right: 0%;
-  width: 0%;
-  opacity: 0;
-  color: rgb(228, 255, 74);
-  font-size: 1.2em;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-}
-
-.Btn:hover {
-  transform: scale(1);
-}
-
 
 .text-bottom-container {
   margin-top: 1.8rem;
@@ -180,44 +154,38 @@ body {
   justify-content: center;
   align-items: center;
   gap: .3rem;
-  color: #c6ff5c;
+  color: white;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
 }
 
 .text-bottom-container h4 {
-  background: #CFB647;
-  background: radial-gradient(circle farthest-side at center center, #edff47 50%, #92d645 76%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.7rem;
-  text-transform: uppercase;
+  color: white;
+  font-size: 1.4rem;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
-  font-weight: 800;
+  font-weight: 100 !important;
   font-style: normal;
   letter-spacing: 2px;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.048);
-
 }
 
 .text-bottom-container h5 {
-  color: #c6ff5c;
+  color: white;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
-  text-shadow: 1px 1px black;
+	text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .text-bottom-container p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 400;
-  text-shadow: 1px 1px black;
+			text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   font-family: "Bebas Neue", sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -225,17 +193,59 @@ body {
 }
 
 .text-bottom-container span {
-  color: #c6ff5c;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
-  text-shadow: 1px 1px black;
+			text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
+
+		.form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1.5rem; 
+			margin-bottom: 1rem;
+		}
+
+		.name-input {
+			padding: 12px 15px;
+			font-size: 20px;
+			border: 2px solid #11c40e;
+			border-radius: 10px;
+			background-color: rgba(0, 0, 0, 0.7); 
+			color: #fff;
+			width: 90%;
+			max-width: 350px;
+			text-align: center;
+			box-shadow: 0 0 10px rgba(17, 196, 14, 0.5); 
+		}
+		
+		.name-input::placeholder {
+			color: #aaa;
+		}
+
+    .name-input:focus {
+  outline: none;
+  border: 2px solid #11c40e;
+  box-shadow: 0 0 10px rgba(17, 196, 14, 0.5);
+}
+
+/* 🔴 elimina el rojo del navegador */
+.name-input:invalid {
+  border: 2px solid #11c40e;
+  box-shadow: 0 0 10px rgba(17, 196, 14, 0.5);
+}
+
+/* también en focus inválido */
+.name-input:focus:invalid {
+  border: 2px solid #11c40e;
+  box-shadow: 0 0 10px rgba(17, 196, 14, 0.5);
+}
 
 
 .fade-in {
