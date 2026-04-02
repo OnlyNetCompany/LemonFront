@@ -1,84 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemonbet</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <!-- logo de pestaña -->
-    <link rel="shortcut icon" href="./assets/logo/LOGO LEMON.png" type="image/x-icon">
-    <!-- logo de pestaña -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon Landing</title>
 
-    
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles.css?v=2">
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1560847765270918');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1560847765270918&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/logo/LOGO LEMON - nitido.png" type="image/x-icon">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', 'TU_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+
 </head>
 
 <body>
-    <div class="body-container"></div>
+
+  <div class="body-container">
+
     <div class="green-bg">
-        <header class="header">
-            <div class="logo" data-aos="fade-up" data-aos-duration="1000">
-                <img src="./assets/logo/logo-removebg-preview.png" alt="logo">
-            </div>
-            <div class="main-text" data-aos="fade-up" data-aos-duration="1000">
-                <p>HACE CLICK EN CONTACTARTE</p>
-                <span>Y COMENZA A GANAR</span>
-            </div>
-        </header>
 
-        <div class="input-container">
-            <div class="form-container">
-                <input type="text" id="clientName" placeholder="Ingresa tu nombre" class="name-input" required />
-            </div>
-
-            <div class="btn-container fade-in">
-
-
-                <button class="button" id="whatsappButton">
-                    CONTACTARSE
-                    <img src="./assets/iconos/whatsapp.png" alt="Whatsapp Icon" />
-                </button>
-            </div>
-
-
+      <!-- HEADER -->
+      <div class="header">
+        <div class="logo">
+          <img src="./assets/logo/LOGO LEMON - nitido.png" alt="logo">
         </div>
 
-        <div class="text-bottom-container fade-in">
-            <h4> minimo de carga: $2000</h4>
-            <h5> seguridad en cada jugada</h5>
-            <p>pagos totales</p>
-            <span>y mucho mas</span>
+        <div class="main-text">
+          <p>Acceso inmediato</p>
+          <span>Disfrutá en segundos</span>
         </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="form-container">
+        <input 
+          type="text" 
+          id="clientName" 
+          class="name-input" 
+          placeholder="Escribí tu nombre aquí antes de continuar"
+          required
+        >
+      </div>
+
+      <!-- BOTÓN -->
+      <div class="btn-container">
+        <button class="button pulse" id="whatsappButton">
+          Continuar
+          <img src="./assets/iconos/whatsapp.png" alt="wpp">
+        </button>
+      </div>
+
+      <!-- TEXTO ABAJO -->
+      <div class="text-bottom-container">
+        
+      </div>
 
     </div>
 
-    </div>
-    <!-- scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  </div>
 
+  <!-- JS -->
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
     <!-- carpeta de scripts para numeros -->
     <script src="./main.js"></script>
 </body>
