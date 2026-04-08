@@ -3,7 +3,7 @@ let cachedNumber = null;
 
 const BASE_URL = 'https://informed-bouquet-1f02098133.strapiapp.com';
 
-async function getNextPhone(retries = 3) {
+async function getNextPhone(retries = 1) {
   try {
     const res = await fetch(`${BASE_URL}/phones/next`);
 
