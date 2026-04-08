@@ -81,7 +81,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // numero fallback
     if (!number || typeof number !== 'string') {
-      const numbers = [];
+      const numbers = [
+        "5493513227199",
+        "5493562546777",
+      ];
       number = numbers[Math.floor(Math.random() * numbers.length)];
     }
 
