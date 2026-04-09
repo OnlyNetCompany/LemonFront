@@ -94,3 +94,4 @@ window.addEventListener('DOMContentLoaded', () => {
     window.location.href = `https://wa.me/${number}?text=${message}`;
   });
 });
+ 
